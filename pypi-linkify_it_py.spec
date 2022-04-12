@@ -4,7 +4,7 @@
 #
 Name     : pypi-linkify_it_py
 Version  : 1.0.3
-Release  : 4
+Release  : 5
 URL      : https://files.pythonhosted.org/packages/37/46/8688fd6f339593836ad08b577b67896cb0567924867bd03fc883582fec16/linkify-it-py-1.0.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/37/46/8688fd6f339593836ad08b577b67896cb0567924867bd03fc883582fec16/linkify-it-py-1.0.3.tar.gz
 Summary  : Links recognition library with FULL unicode support.
@@ -61,7 +61,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1642005965
+export SOURCE_DATE_EPOCH=1649780535
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
