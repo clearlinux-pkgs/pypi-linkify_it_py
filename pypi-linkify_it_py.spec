@@ -4,7 +4,7 @@
 #
 Name     : pypi-linkify_it_py
 Version  : 2.0.0
-Release  : 14
+Release  : 15
 URL      : https://files.pythonhosted.org/packages/f4/8d/abb58e1ed268d5ef787bf95c7e42d0f95f3aa7f9cd41ff990c25fcc8ed0c/linkify-it-py-2.0.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f4/8d/abb58e1ed268d5ef787bf95c7e42d0f95f3aa7f9cd41ff990c25fcc8ed0c/linkify-it-py-2.0.0.tar.gz
 Summary  : Links recognition library with FULL unicode support.
@@ -15,6 +15,9 @@ Requires: pypi-linkify_it_py-python = %{version}-%{release}
 Requires: pypi-linkify_it_py-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 BuildRequires : pypi(uc_micro_py)
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
 # linkify-it-py
@@ -64,15 +67,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1656395548
+export SOURCE_DATE_EPOCH=1672287756
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
@@ -89,7 +92,7 @@ popd
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-linkify_it_py
-cp %{_builddir}/linkify-it-py-2.0.0/LICENSE %{buildroot}/usr/share/package-licenses/pypi-linkify_it_py/d5877e21ab96983663f54d8faa3eca337aaa24b9
+cp %{_builddir}/linkify-it-py-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-linkify_it_py/d5877e21ab96983663f54d8faa3eca337aaa24b9 || :
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
