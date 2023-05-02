@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-linkify_it_py
-Version  : 2.0.1
-Release  : 17
-URL      : https://files.pythonhosted.org/packages/b6/46/1f6a5169e55b918ef5c8fff329a88d8d03ee571c387c501918defab07473/linkify-it-py-2.0.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/b6/46/1f6a5169e55b918ef5c8fff329a88d8d03ee571c387c501918defab07473/linkify-it-py-2.0.1.tar.gz
+Version  : 2.0.2
+Release  : 18
+URL      : https://files.pythonhosted.org/packages/8d/fd/73bb30ec2b3cd952fe139a79a40ce5f5fd0280dd2cc1de94c93ea6a714d2/linkify-it-py-2.0.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/8d/fd/73bb30ec2b3cd952fe139a79a40ce5f5fd0280dd2cc1de94c93ea6a714d2/linkify-it-py-2.0.2.tar.gz
 Summary  : Links recognition library with FULL unicode support.
 Group    : Development/Tools
 License  : MIT
@@ -29,6 +29,7 @@ BuildRequires : pypi-virtualenv
 [![CI](https://github.com/tsutsu3/linkify-it-py/workflows/CI/badge.svg?branch=main)](https://github.com/tsutsu3/linkify-it-py/actions)
 [![pypi](https://img.shields.io/pypi/v/linkify-it-py)](https://pypi.org/project/linkify-it-py/)
 [![Anaconda-Server Badge](https://anaconda.org/conda-forge/linkify-it-py/badges/version.svg)](https://anaconda.org/conda-forge/linkify-it-py)
+[![Documentation Status](https://readthedocs.org/projects/linkify-it-py/badge/?version=latest)](https://linkify-it-py.readthedocs.io/en/latest/?badge=latest)
 [![codecov](https://codecov.io/gh/tsutsu3/linkify-it-py/branch/main/graph/badge.svg)](https://codecov.io/gh/tsutsu3/linkify-it-py)
 [![Maintainability](https://api.codeclimate.com/v1/badges/6341fd3ec5f05fde392f/maintainability)](https://codeclimate.com/github/tsutsu3/linkify-it-py/maintainability)
 
@@ -61,10 +62,10 @@ python3 components for the pypi-linkify_it_py package.
 
 
 %prep
-%setup -q -n linkify-it-py-2.0.1
-cd %{_builddir}/linkify-it-py-2.0.1
+%setup -q -n linkify-it-py-2.0.2
+cd %{_builddir}/linkify-it-py-2.0.2
 pushd ..
-cp -a linkify-it-py-2.0.1 buildavx2
+cp -a linkify-it-py-2.0.2 buildavx2
 popd
 
 %build
@@ -72,7 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1682973652
+export SOURCE_DATE_EPOCH=1683041436
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
