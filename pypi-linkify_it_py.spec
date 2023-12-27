@@ -5,7 +5,7 @@
 #
 Name     : pypi-linkify_it_py
 Version  : 2.0.2
-Release  : 19
+Release  : 20
 URL      : https://files.pythonhosted.org/packages/8d/fd/73bb30ec2b3cd952fe139a79a40ce5f5fd0280dd2cc1de94c93ea6a714d2/linkify-it-py-2.0.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/8d/fd/73bb30ec2b3cd952fe139a79a40ce5f5fd0280dd2cc1de94c93ea6a714d2/linkify-it-py-2.0.2.tar.gz
 Summary  : Links recognition library with FULL unicode support.
