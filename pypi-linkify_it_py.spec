@@ -6,10 +6,10 @@
 # autospec commit: 750e50d
 #
 Name     : pypi-linkify_it_py
-Version  : 2.0.2
-Release  : 21
-URL      : https://files.pythonhosted.org/packages/8d/fd/73bb30ec2b3cd952fe139a79a40ce5f5fd0280dd2cc1de94c93ea6a714d2/linkify-it-py-2.0.2.tar.gz
-Source0  : https://files.pythonhosted.org/packages/8d/fd/73bb30ec2b3cd952fe139a79a40ce5f5fd0280dd2cc1de94c93ea6a714d2/linkify-it-py-2.0.2.tar.gz
+Version  : 2.0.3
+Release  : 22
+URL      : https://files.pythonhosted.org/packages/2a/ae/bb56c6828e4797ba5a4821eec7c43b8bf40f69cda4d4f5f8c8a2810ec96a/linkify-it-py-2.0.3.tar.gz
+Source0  : https://files.pythonhosted.org/packages/2a/ae/bb56c6828e4797ba5a4821eec7c43b8bf40f69cda4d4f5f8c8a2810ec96a/linkify-it-py-2.0.3.tar.gz
 Summary  : Links recognition library with FULL unicode support.
 Group    : Development/Tools
 License  : MIT
@@ -65,10 +65,10 @@ python3 components for the pypi-linkify_it_py package.
 
 
 %prep
-%setup -q -n linkify-it-py-2.0.2
-cd %{_builddir}/linkify-it-py-2.0.2
+%setup -q -n linkify-it-py-2.0.3
+cd %{_builddir}/linkify-it-py-2.0.3
 pushd ..
-cp -a linkify-it-py-2.0.2 buildavx2
+cp -a linkify-it-py-2.0.3 buildavx2
 popd
 
 %build
@@ -76,7 +76,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1707125933
+export SOURCE_DATE_EPOCH=1707148691
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
